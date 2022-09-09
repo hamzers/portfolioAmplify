@@ -36,7 +36,7 @@ function App() {
     <div className="App">
     <div className='Navbar'>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{background: '#003049'}}>
+      <AppBar position="fixed" style={{background: '#f8f9e9', color: 'black'}}>
         <Toolbar>
           <Button onClick={scrollToHome} color="inherit" variant='outlined'>Home</Button>
           <Button onClick={scrollToAbout} color='inherit'>About Me</Button>
@@ -47,28 +47,20 @@ function App() {
     </Box>
     </div>
       <div ref={homeref}>
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          <code>Welcome to Hamza's page.</code>
-        </p>
-        <p className='App-description'>
-          <code>
-            I'm Hamza Shaikh, a senior in Computer Science at Purdue University. I specifically track in 
-            machine learning and security. 
-          </code>
-        </p>
+      <header className='App-header'>
+        <h1>
+            <code> WELCOME TO HAMZA'S PAGE </code>
+        </h1>
         <code>
-        <p>Things I like to do include but are not limited to:</p>
         <p>
-          Coding, Reading, Riding Motorcycles, Solving Problems
+            "Your time is limited, so don't waste it living someone else's life."  
         </p>
-        <br/><br/>
+        <p>Keep scrolling or click on the navbar menu to learn more!</p>
         <p>Check out my
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href={require("./files/Hamza_Shaikh_Resume.pdf")}
+          href="Hamza_Shaikh_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -93,7 +85,6 @@ function App() {
           Github
         </a>
         </p>
-        <p>Keep scrolling or click on the navbar menu to learn more!</p>
         </code>
       </header>
       </div>
