@@ -2,13 +2,51 @@ import logo from './logo.svg';
 import './App.css';
 import About from './Components/about';
 import Project from './Components/project';
-import NavBar from './Components/Navbar';
+import WorkXP from './Components/workxp';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import {useRef} from 'react';
+
+
+
 
 function App() {
+
+  const homeref = useRef(null);
+  const aboutref = useRef(null);
+  const projectref = useRef(null);
+  const workxpref = useRef(null);
+
+  const scrollToHome = () => {
+    homeref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+  const scrollToAbout = () => {
+    aboutref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+  const scrollToProj = () => {
+    projectref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+  const scrollToWorkXP = () => {
+    workxpref.current?.scrollIntoView({behavior: 'smooth'});
+  };
   return (
     <>
     <div className="App">
-    <NavBar/>
+    <div className='Navbar'>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed" style={{background: '#003049'}}>
+        <Toolbar>
+          <Button onClick={scrollToHome} color="inherit" variant='outlined'>Home</Button>
+          <Button onClick={scrollToAbout} color='inherit'>About Me</Button>
+          <Button onClick={scrollToProj} color="inherit">Projects</Button>
+          <Button onClick={scrollToWorkXP} color="inherit">Work XP</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    </div>
+      <div ref={homeref}>
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
@@ -30,7 +68,7 @@ function App() {
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href={require("./Hamza_Shaikh_Resume.pdf")}
+          href={require("./files/Hamza_Shaikh_Resume.pdf")}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -55,10 +93,19 @@ function App() {
           Github
         </a>
         </p>
+        <p>Keep scrolling or click on the navbar menu to learn more!</p>
         </code>
       </header>
+      </div>
+      <div ref={aboutref}>
       <About/>
+      </div>
+      <div ref={projectref}>
       <Project/>
+      </div>
+      <div ref={workxpref}>
+      <WorkXP/>
+      </div>
     </div>
     </>
   );
