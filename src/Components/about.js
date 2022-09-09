@@ -17,7 +17,7 @@ const About = () => {
                 <div style={{ margin: "20px"}}>
                     <code>
                     <h1 style={{margin: "20px"}}>ABOUT ME</h1>
-                    <p>I'm Hamza Shaikh, a senior in Computer Science at Purdue University. I specifically track in 
+                    <p>I'm Hamza M Shaikh, a senior in Computer Science at Purdue University. I specifically track in 
             machine learning and security.</p>
                     <br>
                     </br>

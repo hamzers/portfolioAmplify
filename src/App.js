@@ -11,9 +11,9 @@ import {useRef} from 'react';
 
 
 
-
 function App() {
 
+  document.title = "Hamza's Portfolio"
   const homeref = useRef(null);
   const aboutref = useRef(null);
   const projectref = useRef(null);
