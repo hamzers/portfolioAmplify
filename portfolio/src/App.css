@@ -14,35 +14,46 @@
 }
 
 .App-header {
-  background-color: #003049;
+  background-color: #f8f9e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px + 1vmin);
+  color: black;
+}
+.About-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: #21252b;
 }
 
 .App-section2 {
-  background-color: #D62828;
+  /* background-color: #042738; */
+  background-color: #f8f9e9;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px + 1vmin);
+  color: #21252b;
 }
 .App-section1 {
-  background-color: #003049;
+  background-color: #f8f9e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px + 1vmin);
+  color: black;
 }
 
 
@@ -55,7 +66,7 @@
 }
 
 .Navbar {
-  color: #EAE287;
+  color: #231F20;
 }
 
 @keyframes App-logo-spin {
