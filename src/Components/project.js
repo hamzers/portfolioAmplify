@@ -54,7 +54,7 @@ const projects = [
 
   const Container = (props) => {
     return (
-      <div style={{ height: "80%", width: "70%", margin: "50px"}}>
+      <div style={{ height: "80%", width: "70%", margin: "20px"}}>
         <Paper style={{ minHeight: "700px", width: "900px", background: "#FFFFFF"}} elevation="10">
           <div style={{ margin: "20px"}}>
           <code>
