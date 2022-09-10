@@ -81,6 +81,8 @@ const WorkXP = () => {
 
     return (
       <div className='App-section2'>
+        <br/><br/>
+      <h1>Work Experience</h1>
       <div style={{ width: "100%", overflow: "auto", display: "flex"}}>
         {map(xps, wxp => (
           <div style={{margin: "25px"}}>

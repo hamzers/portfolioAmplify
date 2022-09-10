@@ -39,6 +39,7 @@ const About = () => {
                     <p>
                     MongoDB, NodeJS, React, Deno, Docker, NGINX, Google Firebase Auth & Storage, Splunk, GCP VMs, NGINX, AWS DynamoDB, AWS Amplify, PyTorch, Tensorflow
                     </p>
+                    <p>(I can pick up new tools pretty fast)</p>
                     </code>
                 </div>
             </Paper>
