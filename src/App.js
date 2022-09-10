@@ -60,7 +60,7 @@ function App() {
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href="Hamza_Shaikh_Resume.pdf"
+          href="/Hamza_Shaikh_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
