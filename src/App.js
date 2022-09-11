@@ -36,7 +36,7 @@ function App() {
     <div className="App">
     <div className='Navbar'>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{background: '#f8f9e9', color: 'black'}}>
+      <AppBar position="fixed" style={{background: '#f8f9e9', color: '#062336'}}>
         <Toolbar>
           <Button onClick={scrollToHome} color="inherit" variant='outlined'>Home</Button>
           <Button onClick={scrollToAbout} color='inherit'>About Me</Button>
@@ -60,7 +60,7 @@ function App() {
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href="/Hamza_Shaikh_Resume.pdf"
+          href="https://drive.google.com/file/d/1lMb-5RcOkmtNIDIy6jDwOL9F8DbUXZJY/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
