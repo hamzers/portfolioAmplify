@@ -5,6 +5,15 @@ import map from "lodash/map";
 
 const projects = [
     {
+      name: 'Gpt2 Fine Tuning for Instagram Captions',
+      links: ["https://huggingface.co/thicchamz/gpt2_finetune_instagram_caption_generator", "https://github.com/hamzers/gpt2_fine_tune_instagram_captions"],
+      imgs: [],
+      description: 'Quick fun project to fine-tune gpt 2 on a dataset of Instagram Captions to generate text with Instagram user comment lingo.',
+      tid:"Model Fine Tuning, Upload to Hugging Face",
+      note:"",
+      active: true
+    },
+    {
       name: 'LogicNerve',
       links: ["https://logicnerve.com"],
       imgs: [],
@@ -55,7 +64,7 @@ const projects = [
   const Container = (props) => {
     return (
       <div style={{ height: "80%", width: "70%", margin: "20px"}}>
-        <Paper style={{ minHeight: "700px", width: "900px", background: "#13334b", color:"#f8f9e9"}} elevation="10">
+        <Paper style={{ minHeight: "600px", width: "700px", background: "#082032", color:"#f8f9e9"}} elevation="10">
           <div style={{ margin: "20px"}}>
           <code>
           <img src={props.img} width="40%" />
@@ -67,7 +76,7 @@ const projects = [
           <br/>
           {
             props.links.map((link) => {
-              return   <a 
+              return   <><a 
               style={{marginLeft: "1em"}}
               className="App-link"
               target="_blank"
@@ -75,6 +84,8 @@ const projects = [
               href={link}>
                 {link}
             </a>
+            <br />
+            </>
             })
           }
           <p>{props.note}</p>

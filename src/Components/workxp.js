@@ -58,10 +58,10 @@ const getWorkXP = () => {
 const Container = (props) => {
   return (
     <div style={{ height: "80%", width: "70%", margin: "50px"}}>
-      <Paper style={{ minHeight: "700px", width: "900px", background: "#13334b", color:"#f8f9e9"}} elevation="10">
+      <Paper style={{ minHeight: "700px", width: "800px", background: "#082032", color:"#f8f9e9"}} elevation="10">
         <div style={{ margin: "20px"}}>
         <code>
-        <img src={props.img} width="40%" />
+        <img src={props.img} width="30%" />
         <h3 style={{margin: "20px"}}>{props.name}</h3>
         <p>{props.description1}</p>
         <br>

@@ -6,14 +6,14 @@ const About = () => {
     return (
         <div className='App-section2'>
         <div style={{ width: "100%", overflow: "auto", display: "flex" }}>
-            <Paper style={{ minHeight: "700px", width: "40%", background: "#062336"}} elevation="0">
+            <Paper style={{ minHeight: "700px", width: "40%", background:"#000000"}} elevation="0">
                 <div style={{ marginTop:"20%", marginLeft: "auto", marginRight: "auto"}}>
                     <Paper style={{width: "95%"}} elevation="5">
                         <img src="/hamza-bike.png" width="100%" height="100%" />
                     </Paper>
                 </div>
             </Paper>
-            <Paper style={{ minHeight: "700px", width: "60%", background: "#062336", color:"#f8f9e9"}} elevation="0">
+            <Paper style={{ minHeight: "700px", width: "60%", background:"#000000", color:"#f8f9e9"}} elevation="0">
                 <div style={{ margin: "20px"}}>
                     <code>
                     <h1 style={{margin: "20px"}}>ABOUT ME</h1>

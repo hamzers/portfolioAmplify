@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #062336;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 
 .App-section2 {
   /* background-color: #042738; */
-  background-color: #062336;
+  background-color: #000000;
   
   min-height: 100vh;
   display: flex;
@@ -46,7 +46,7 @@
   color: #f8f9e9;
 }
 .App-section1 {
-  background-color: #062336;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
