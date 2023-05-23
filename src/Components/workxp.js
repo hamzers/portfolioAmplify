@@ -6,6 +6,15 @@ import range from "lodash/range";
 
 const xps = [
     {
+      name: 'Invici',
+      description1: 
+      "Co-Founder, Full Stack Engineer (Full Time if I'm looking for a job, Part Time if I have one) - March 2023 - Present",
+      description2:
+      "Basically the exact thing of the Invici Project Card. Beyond implementing all the software/deployment involved, I also meet with potential customers to personally understand their pain points and devise/implement solutions based on patterns I see. I also get feedback from the customers to do continuous reiteration, implementation, and deployment.",
+      img:"/Invici.png",
+      photo: true
+    },
+    {
       name: 'Cisco',
       description1: 
       "Software Engineering Intern - Vulnerability Management - May 2022 - August 2022",

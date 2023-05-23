@@ -55,12 +55,23 @@ function App() {
         <p>
             "Your time is limited, so don't waste it living someone else's life."  
         </p>
+        <p>Check out this startup idea I'm working on:
+        <a
+          style={{marginLeft: "1em"}}
+          className="App-link"
+          href="https://inviciai.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Invici
+        </a>
+        </p>
         <p>Keep scrolling or click on the navbar menu to learn more!</p>
         <p>Check out my
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href="https://drive.google.com/file/d/1mc4VdmfAFUxhKNpYpux7UPte01zoyA3D/view?usp=sharing"
+          href="https://docs.google.com/document/d/1GF4tEhRRXavtDMZhoGbfZaopAz1HOtIioRVpObFesOE/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >

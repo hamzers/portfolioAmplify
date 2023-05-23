@@ -5,6 +5,15 @@ import map from "lodash/map";
 
 const projects = [
     {
+      name: 'Invici',
+      links: ["https://inviciai.com", "/invici_proof_of_concept.webarchive"],
+      imgs: [],
+      description: 'A proof of concept of being able to extract product information from Invoices. This turned into a startup in which I created a shopify app allowing merchants to automatically extract invoice information, fill in missing information via data retrieval and generation, and export the data into shopify listing on their store.',
+      tid:"Shopfiy React App, Flask Backend for APIs, Created invoice processing api, utilized ML models including DeTr networks and GPU accelerated OCRs, utilized open-assistant chat AI models and Image-to-text networks for description generation, table data extraction code, MongoDB database, cloud hosting and routing (AWS & GCP)",
+      note:"We are currently beta testing with customers. We also won a $10,000 grant in a pitch competition.",
+      active: true
+    },
+    {
       name: 'Gpt2 Fine Tuning for Instagram Captions',
       links: ["https://huggingface.co/thicchamz/gpt2_finetune_instagram_caption_generator", "https://github.com/hamzers/gpt2_fine_tune_instagram_captions"],
       imgs: [],
@@ -15,11 +24,11 @@ const projects = [
     },
     {
       name: 'LogicNerve',
-      links: ["https://logicnerve.com"],
+      links: [],
       imgs: [],
       description: 'LogicNerve is a project I started to attempt to build a base HIPAA compliant platform for medical IoT creators to base their devices on without having to worry about HIPAA compliancy or regulations.',
       tid:"Created microservice structure, implemented Firebase authentication, implemented JWT authentication microservice for backend services, added organizations feature, created service to handle creation and changes in user information, email authentication, reverse proxy via NGINX, setup and connected MongoDB storage for all data, created service to handle attributing data streams from user devices, containerized services with docker, created automated testing service to test all API endpoints.",
-      note:"(site may be down for revamp)",
+      note:"(site taken down with project)",
       active: true
     },
     {
