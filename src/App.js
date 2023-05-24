@@ -71,7 +71,7 @@ function App() {
         <a
           style={{marginLeft: "1em"}}
           className="App-link"
-          href="https://docs.google.com/document/d/1GF4tEhRRXavtDMZhoGbfZaopAz1HOtIioRVpObFesOE/edit?usp=sharing"
+          href="https://www.overleaf.com/read/rhcvdbvzxjtm"
           target="_blank"
           rel="noopener noreferrer"
         >
