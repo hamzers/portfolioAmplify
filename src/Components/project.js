@@ -10,7 +10,7 @@ const projects = [
       imgs: [],
       description: 'A proof of concept of being able to extract product information from Invoices. This turned into a startup in which I created a shopify app allowing merchants to automatically extract invoice information, fill in missing information via data retrieval and generation, and export the data into shopify listing on their store.',
       tid:"Shopfiy React App, Flask Backend for APIs, Created invoice processing api, utilized ML models including DeTr networks and GPU accelerated OCRs, utilized open-assistant chat AI models and Image-to-text networks for description generation, table data extraction code, MongoDB database, cloud hosting and routing (AWS & GCP)",
-      note:"We are currently beta testing with customers. We also won a $10,000 grant in a pitch competition.",
+      note:"Password to website is 'invici'. We are currently beta testing with customers. We also won a $10,000 grant in a pitch competition.",
       active: true
     },
     {
