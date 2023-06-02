@@ -61,7 +61,7 @@ const projects = [
     {
       name: 'Meme Hotline',
       imgs: [],
-      links: [],
+      links: ['https://github.com/hamzers/vandy19'],
       tid:"Created 'DeepFry' feature with openCV, created tmp storage for photos to be stored for twilio export.",
       note:"",
       description: 'We attempted to utilize Twilio\'s API to create a Meme Hotline, which sent GIFs based on text input and returned Deepfried images based on user image input.',
