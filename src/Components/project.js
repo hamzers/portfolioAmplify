@@ -52,7 +52,7 @@ const projects = [
     {
       name: 'Unity VR Classroom',
       imgs: [],
-      links: [],
+      links: ['https://github.com/ethanclay99/VRClassroom'],
       tid:"I created unity scripts to allow user input for transformation of objects, created actions to occur on collisons, created tasks to achieve throughout classroom experience.",
       note:"",
       description: 'Fellow students and I worked on a prototype of a unity based VR classroom that could be run off a cellphone using Google Cardboard VR headsets.',
