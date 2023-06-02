@@ -24,7 +24,7 @@ const projects = [
     },
     {
       name: 'LogicNerve',
-      links: [],
+      links: ['https://github.com/logicnervetechnologies'],
       imgs: [],
       description: 'LogicNerve is a project I started to attempt to build a base HIPAA compliant platform for medical IoT creators to base their devices on without having to worry about HIPAA compliancy or regulations.',
       tid:"Created microservice structure, implemented Firebase authentication, implemented JWT authentication microservice for backend services, added organizations feature, created service to handle creation and changes in user information, email authentication, reverse proxy via NGINX, setup and connected MongoDB storage for all data, created service to handle attributing data streams from user devices, containerized services with docker, created automated testing service to test all API endpoints.",
