@@ -1,186 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function Project() {
+const Project = () => {
   const projects = [
     {
-      title: 'Invici - AI-Powered Analytics Platform',
-      description: 'A comprehensive analytics platform leveraging machine learning for business intelligence and predictive analytics.',
-      technologies: ['React', 'Python', 'TensorFlow', 'AWS', 'PostgreSQL'],
-      image: '/Invici.png',
-      links: {
-        demo: '#',
-        github: '#'
-      },
-      highlights: [
-        'Real-time data processing with 99.9% uptime',
-        'ML models achieving 85% prediction accuracy',
-        'Scalable architecture handling 1M+ data points daily'
-      ]
+      title: "IoT Security Dashboard",
+      description: "A comprehensive dashboard for monitoring and managing IoT device security across enterprise networks. Features real-time threat detection and automated response capabilities.",
+      technologies: ["React", "Node.js", "AWS", "WebSocket", "D3.js"],
+      company: "WootCloud",
+      year: "2023"
     },
     {
-      title: 'Cloud Infrastructure Automation',
-      description: 'DevOps automation suite for managing cloud infrastructure with Infrastructure as Code principles.',
-      technologies: ['Terraform', 'Docker', 'Kubernetes', 'Python', 'AWS'],
-      image: '/cisco.png',
-      links: {
-        demo: '#',
-        github: '#'
-      },
-      highlights: [
-        'Reduced deployment time by 70%',
-        'Automated scaling for 50+ microservices',
-        'Cost optimization saving $10k+ monthly'
-      ]
+      title: "Network Automation Suite",
+      description: "Developed tools for automating network configuration and monitoring. Reduced manual configuration time by 80% and improved network reliability.",
+      technologies: ["Python", "REST APIs", "Docker", "PostgreSQL"],
+      company: "Cisco",
+      year: "2021"
     },
     {
-      title: 'Security Monitoring Dashboard',
-      description: 'Real-time cybersecurity monitoring dashboard for threat detection and incident response.',
-      technologies: ['Vue.js', 'Node.js', 'Elasticsearch', 'Redis', 'Docker'],
-      image: '/kenna.png',
-      links: {
-        demo: '#',
-        github: '#'
-      },
-      highlights: [
-        'Real-time threat visualization',
-        'Automated alert system',
-        'Integration with 15+ security tools'
-      ]
+      title: "Vulnerability Analytics Platform",
+      description: "Built a platform for analyzing and visualizing security vulnerabilities across enterprise systems. Helped prioritize security remediation efforts.",
+      technologies: ["React", "Python", "D3.js", "Redis", "PostgreSQL"],
+      company: "Kenna Security",
+      year: "2021"
+    },
+    {
+      title: "Startup MVP Solutions",
+      description: "Created multiple proof-of-concept applications and MVPs for various startup initiatives. Focused on rapid prototyping and user validation.",
+      technologies: ["React", "Express.js", "MongoDB", "Node.js"],
+      company: "Invici",
+      year: "2020"
     }
   ];
 
   return (
     <motion.div 
-      className="glass-card"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
     >
-      <h2 style={{ fontSize: '2rem', marginBottom: '2rem', fontWeight: '600' }}>
-        Featured Projects
-      </h2>
-      
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          className="project-item"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 + (0.1 * index) }}
-          whileHover={{ scale: 1.02 }}
-        >
-          <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '1.5rem' }}>
-            <motion.img
-              src={project.image}
-              alt={project.title}
-              style={{ 
-                width: '80px', 
-                height: '80px', 
-                objectFit: 'cover',
-                borderRadius: '12px',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            />
-            <div style={{ flex: 1 }}>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-                {project.title}
-              </h3>
-              <p style={{ 
-                fontSize: '0.95rem',
-                marginBottom: '1rem',
-                color: 'rgba(255, 255, 255, 0.8)'
-              }}>
-                {project.description}
-              </p>
+      <h2 className="section-title">Featured Projects</h2>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <motion.div 
+            key={index}
+            className="dark-card"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 * index }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <h3 style={{ color: '#61dafb', marginBottom: '15px', fontSize: '1.3em' }}>
+              {project.title}
+            </h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
+              <span style={{ color: '#f0f0f0', fontSize: '1em' }}>{project.company}</span>
+              <span style={{ color: '#888', fontSize: '0.9em' }}>{project.year}</span>
             </div>
-          </div>
-          
-          <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ 
-              display: 'flex', 
-              flexWrap: 'wrap', 
-              gap: '0.5rem',
-              marginBottom: '1rem'
-            }}>
+            <p style={{ color: '#d0d0d0', lineHeight: '1.6', marginBottom: '20px' }}>
+              {project.description}
+            </p>
+            <div>
               {project.technologies.map((tech, techIndex) => (
-                <motion.span
-                  key={tech}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    padding: '0.3rem 0.8rem',
-                    borderRadius: '8px',
-                    fontSize: '0.8rem',
-                    border: '1px solid rgba(255, 255, 255, 0.15)'
-                  }}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: 0.05 * techIndex }}
-                >
+                <span key={techIndex} className="tech-tag">
                   {tech}
-                </motion.span>
+                </span>
               ))}
             </div>
-            
-            <ul style={{ 
-              listStyle: 'none', 
-              padding: 0,
-              margin: 0,
-              marginBottom: '1rem'
-            }}>
-              {project.highlights.map((highlight, hlIndex) => (
-                <motion.li
-                  key={hlIndex}
-                  style={{ 
-                    marginBottom: '0.4rem',
-                    paddingLeft: '1rem',
-                    position: 'relative',
-                    fontSize: '0.85rem',
-                    color: 'rgba(255, 255, 255, 0.7)'
-                  }}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + (hlIndex * 0.1) }}
-                >
-                  <span style={{
-                    position: 'absolute',
-                    left: 0,
-                    color: 'rgba(255, 255, 255, 0.5)'
-                  }}>
-                    ▸
-                  </span>
-                  {highlight}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-          
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <motion.a
-              href={project.links.demo}
-              className="glass-button"
-              style={{ fontSize: '0.9rem', padding: '0.6rem 1.2rem' }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              🚀 Live Demo
-            </motion.a>
-            <motion.a
-              href={project.links.github}
-              className="glass-button"
-              style={{ fontSize: '0.9rem', padding: '0.6rem 1.2rem' }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              📂 Source Code
-            </motion.a>
-          </div>
-        </motion.div>
-      ))}
+          </motion.div>
+        ))}
+      </div>
     </motion.div>
   );
-}
+};
 
 export default Project;
