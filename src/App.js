@@ -1,44 +1,58 @@
 import React from 'react';
 import './App.css';
 import About from './Components/about';
-import Project from './Components/project';
 import WorkXP from './Components/workxp';
-import StickyBox from 'react-sticky-box';
-import { motion } from 'framer-motion';
+import Project from './Components/project';
 
 function App() {
   return (
     <div className="App">
-      <div className="liquid-glass-bg">
-        <div className="glass-orb glass-orb-1"></div>
-        <div className="glass-orb glass-orb-2"></div>
-        <div className="glass-orb glass-orb-3"></div>
-      </div>
-      
-      <div className="container">
-        <div className="left-panel">
-          <StickyBox offsetTop={20} offsetBottom={20}>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <About />
-            </motion.div>
-          </StickyBox>
-        </div>
-        
-        <div className="right-panel">
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <WorkXP />
-            <Project />
-          </motion.div>
-        </div>
-      </div>
+      <header className="header">
+        <nav className="nav">
+          <div className="logo">Hamza Shaikh</div>
+          <ul className="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className="container">
+        <section className="hero">
+          <h1>Software Engineer</h1>
+          <p>Building innovative solutions with modern technologies</p>
+        </section>
+
+        <section id="about" className="section">
+          <About />
+        </section>
+
+        <section id="experience" className="section">
+          <h2 className="section-title">Experience</h2>
+          <WorkXP />
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          <Project />
+        </section>
+
+        <section id="contact" className="contact">
+          <h2>Get In Touch</h2>
+          <p>Let's connect and discuss opportunities</p>
+          <div className="contact-links">
+            <a href="mailto:hamza@example.com">Email</a>
+            <a href="https://linkedin.com/in/hamzashaikh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/hamzashaikh" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>&copy; 2024 Hamza Shaikh. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
