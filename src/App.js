@@ -1,115 +1,64 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import About from './Components/about';
 import Project from './Components/project';
-import WorkXP from './Components/workxp';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import {useRef} from 'react';
-
-
+import WorkXp from './Components/workxp';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('about');
+  const [scrollY, setScrollY] = useState(0);
 
-  document.title = "Hamza's Portfolio"
-  const homeref = useRef(null);
-  const aboutref = useRef(null);
-  const projectref = useRef(null);
-  const workxpref = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const scrollToHome = () => {
-    homeref.current?.scrollIntoView({behavior: 'smooth'});
+  const sections = [
+    { id: 'about', label: 'About', component: About },
+    { id: 'experience', label: 'Experience', component: WorkXp },
+    { id: 'projects', label: 'Projects', component: Project }
+  ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+    }
   };
-  const scrollToAbout = () => {
-    aboutref.current?.scrollIntoView({behavior: 'smooth'});
-  };
-  const scrollToProj = () => {
-    projectref.current?.scrollIntoView({behavior: 'smooth'});
-  };
-  const scrollToWorkXP = () => {
-    workxpref.current?.scrollIntoView({behavior: 'smooth'});
-  };
+
   return (
-    <>
     <div className="App">
-    <div className='Navbar'>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{background: '#f8f9e9', color: '#062336'}}>
-        <Toolbar>
-          <Button onClick={scrollToHome} color="inherit" variant='outlined'>Home</Button>
-          <Button onClick={scrollToAbout} color='inherit'>About Me</Button>
-          <Button onClick={scrollToProj} color="inherit">Projects</Button>
-          <Button onClick={scrollToWorkXP} color="inherit">Work XP</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
+      {/* Floating Background Shapes */}
+      <div className="floating-shape"></div>
+      <div className="floating-shape"></div>
+      <div className="floating-shape"></div>
+
+      {/* Navigation */}
+      <nav className="nav-container">
+        <div className="nav-items">
+          {sections.map(section => (
+            <button
+              key={section.id}
+              className={`nav-item ${activeSection === section.id ? 'active' : ''}`}
+              onClick={() => scrollToSection(section.id)}
+            >
+              {section.label}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main style={{ paddingTop: '80px' }}>
+        {sections.map(section => (
+          <section key={section.id} id={section.id}>
+            <section.component />
+          </section>
+        ))}
+      </main>
     </div>
-      <div ref={homeref}>
-      <header className='App-header'>
-        <h1>
-            <code> WELCOME TO HAMZA'S PAGE </code>
-        </h1>
-        <code>
-        <p>
-            "Your time is limited, so don't waste it living someone else's life."  
-        </p>
-        <p>Check out this startup idea I'm working on:
-        <a
-          style={{marginLeft: "1em"}}
-          className="App-link"
-          href="https://inviciai.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Invici
-        </a>
-        </p>
-        <p>Keep scrolling or click on the navbar menu to learn more!</p>
-        <p>Check out my
-        <a
-          style={{marginLeft: "1em"}}
-          className="App-link"
-          href="https://www.overleaf.com/read/rhcvdbvzxjtm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-        <a
-          style={{marginLeft: "1em"}}
-          className="App-link"
-          href="https://www.linkedin.com/in/hamza-s-892a94103/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Linked In
-        </a>
-        <a
-          style={{marginLeft: "1em"}}
-          className='App-link'
-          href='https://github.com/hamzers'
-          target='_blank'
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-        </p>
-        </code>
-      </header>
-      </div>
-      <div ref={aboutref}>
-      <About/>
-      </div>
-      <div ref={projectref}>
-      <Project/>
-      </div>
-      <div ref={workxpref}>
-      <WorkXP/>
-      </div>
-    </div>
-    </>
   );
 }
 
