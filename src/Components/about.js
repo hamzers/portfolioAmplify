@@ -1,50 +1,107 @@
-import "../App.css"
-import { Paper } from "@mui/material";
-  
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const About = () => {
-    return (
-        <div className='App-section2'>
-        <div style={{ width: "100%", overflow: "auto", display: "flex" }}>
-            <Paper style={{ minHeight: "700px", width: "40%", background:"#000000"}} elevation="0">
-                <div style={{ marginTop:"20%", marginLeft: "auto", marginRight: "auto"}}>
-                    <Paper style={{width: "95%"}} elevation="5">
-                        <img src="/hamza-bike.png" width="100%" height="100%" />
-                    </Paper>
-                </div>
-            </Paper>
-            <Paper style={{ minHeight: "700px", width: "60%", background:"#000000", color:"#f8f9e9"}} elevation="0">
-                <div style={{ margin: "20px"}}>
-                    <code>
-                    <h1 style={{margin: "20px"}}>ABOUT ME</h1>
-                    <p>I'm Hamza M Shaikh, a senior in Computer Science at Purdue University. I specifically track in 
-            machine learning and security.</p>
-                    <br>
-                    </br>
-                    <p>Things I like to do include but are not limited to:</p>
-                    <p>
-                    Coding, Reading, Riding Motorcycles, Solving Problems
-                    </p>
-                    <br/>
-                    <p>
-                        Languages I have experience with are:
-                    </p>
-                    <p>
-                        Python, Java, C, C++, JavaScript, Typescript
-                    </p>
-                    <br/>
-                    <p>
-                        Other tech platforms or skills I have experience with are:
-                    </p>
-                    <p>
-                    MongoDB, NodeJS, React, Deno, Docker, NGINX, Google Firebase Auth & Storage, Splunk, GCP VMs, NGINX, AWS DynamoDB, AWS Amplify, PyTorch, Tensorflow
-                    </p>
-                    <p>(I can pick up new tools pretty fast)</p>
-                    </code>
-                </div>
-            </Paper>
-        </div>
+function About() {
+  return (
+    <motion.div 
+      className="glass-card"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <motion.img
+          src="/hamza-bike.png"
+          alt="Hamza Shaikh"
+          className="profile-image"
+          style={{ 
+            width: '200px', 
+            height: '200px', 
+            objectFit: 'cover',
+            marginBottom: '1rem'
+          }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <h1 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '0.5rem' }}>
+          Hamza Shaikh
+        </h1>
+        <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '1.5rem' }}>
+          Senior Software Engineer
+        </p>
       </div>
-      );
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        <p style={{ marginBottom: '1.5rem', fontSize: '1rem' }}>
+          Passionate software engineer with expertise in full-stack development, 
+          cloud technologies, and creating innovative solutions that drive business growth.
+        </p>
+
+        <div style={{ marginBottom: '2rem' }}>
+          <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Skills</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {[
+              'React', 'Node.js', 'Python', 'AWS', 'Docker', 'Kubernetes',
+              'TypeScript', 'GraphQL', 'MongoDB', 'PostgreSQL'
+            ].map((skill, index) => (
+              <motion.span
+                key={skill}
+                className="glass-button"
+                style={{ 
+                  padding: '0.4rem 0.8rem',
+                  fontSize: '0.85rem',
+                  cursor: 'default'
+                }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <motion.a
+            href="/Hamza_Shaikh_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            📄 Resume
+          </motion.a>
+          <motion.a
+            href="https://linkedin.com/in/hamzashaikh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            💼 LinkedIn
+          </motion.a>
+          <motion.a
+            href="https://github.com/hamzashaikh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            🔗 GitHub
+          </motion.a>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
 }
-export default About
+
+export default About;
